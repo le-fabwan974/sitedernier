@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Couleur de fond de secours */
+    overflow: hidden; /* Pour éviter les barres de défilement */
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.ibb.co/HXJ7cyZ/heart-background.png') repeat;
+    background-size: 100px 100px; /* Taille des cœurs */
+    animation: moveHearts 30s linear infinite;
+}
+
+@keyframes moveHearts {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Assure que le contenu est au-dessus du fond */
+}
+
+.image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+#message {
+    font-size: 20px;
+    color: #ff69b4;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
